@@ -66,7 +66,7 @@
       thisProduct.processOrder();
 
       console.log('new Product:', thisProduct);
-    };
+    }
     renderInMenu(){
       const thisProduct = this;
 
@@ -127,7 +127,7 @@
     }
     processOrder(){
       const thisProduct = this;
-      console.log('processOrder', thisProduct);
+      console.log('thisProduct', thisProduct);
       const formData = utils.serializeFormToObject(thisProduct.form);
       console.log('formData', formData);
       // set price to default price
@@ -144,13 +144,24 @@
           // determine option value, e.g. optionId = 'olives', option = { label: 'Olives', price: 2, default: true }
           const option = param.options[optionId];
           console.log(optionId, option);
+            if(formData[paramId] && formData[paramId].includes(optionId)){
+              if(!option.default == true){
+                price += option.price;
+              }
+            } else {
+              // check if the option is default
+              if(option.default == true) {
+                  // reduce price variable
+                  price -= option.price;
+              }
+            }
         }
       }
 
       // update calculated price in the HTML
       thisProduct.priceElem.innerHTML = price;
     }
-};
+  }
 
   const app = {
     initMenu: function(){
