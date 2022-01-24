@@ -424,8 +424,8 @@
         phone: thisCart.dom.phone.value,
         totalPrice: thisCart.totalPrice,
         subtotalPrice: thisCart.dom.subTotalPrice,
-        totalNumber: thisCart.dom.totalNumber,
-        deliveryFee: thisCart.dom.deliveryFee,
+        totalNumber: thisCart.totalNumber,
+        deliveryFee: settings.cart.defaultDeliveryFee,
         products: [],
       };
       for(let product of thisCart.products){
