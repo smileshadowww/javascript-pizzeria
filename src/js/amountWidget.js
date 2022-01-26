@@ -2,12 +2,14 @@ import {settings, select} from './settings.js';
 class AmountWidget{
   constructor(element){
     const thisWidget = this;
-
     // console.log('AmountWidget:', thisWidget);
     // console.log('constructor arguments:', element);
     thisWidget.getElements(element);
-    thisWidget.setValue(settings.amountWidget.defaultValue);
+    thisWidget.setValue(settings.amountWidget.defaultValue); // tu***********************************************************************
     thisWidget.initActions();
+    // if(!isNaN(element) && element>=1){
+    //   thisWidget.setValue(thisWidget);
+    // }
   }
   getElements(element){
     const thisWidget = this;

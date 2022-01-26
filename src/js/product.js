@@ -1,5 +1,5 @@
 import {templates, select, classNames} from './settings.js';
-import AmountWidget from './amountWidget.js';
+import AmountWidget from './AmountWidget.js';
 import {utils} from './utils.js';
 class Product{
   constructor(id, data){
@@ -154,7 +154,7 @@ class Product{
     productSummary.priceSingle = thisProduct.priceSingle;
     productSummary.price = thisProduct.amountWidget.value * productSummary.priceSingle;
     productSummary.params = thisProduct.prepareCartProductParams();
-
+    console.log(productSummary);
     return productSummary;
   }
   prepareCartProductParams() {

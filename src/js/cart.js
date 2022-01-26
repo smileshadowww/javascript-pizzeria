@@ -1,6 +1,6 @@
 import {settings, select, classNames, templates} from './settings.js';
 import {utils} from './utils.js';
-import CartProduct from './cartProduct.js';
+import CartProduct from './CartProduct.js';
 class Cart{
   constructor(element){
     const thisCart = this;
@@ -96,9 +96,9 @@ class Cart{
     const payload = {
       address: thisCart.dom.address.value,
       phone: thisCart.dom.phone.value,
-      totalPrice: thisCart.totalPrice,
+      totalPrice: thisCart.dom.totalPrice,
       subtotalPrice: thisCart.dom.subTotalPrice,
-      totalNumber: thisCart.totalNumber,
+      totalNumber: thisCart.dom.totalNumber,
       deliveryFee: settings.cart.defaultDeliveryFee,
       products: [],
     };
