@@ -4,8 +4,6 @@ class Booking{
   constructor(bookingWidget) {
     const thisBooking = this;
 
-    thisBooking.selectedTable = null;
-
     thisBooking.render(bookingWidget);
     thisBooking.initWidgets();
   }
