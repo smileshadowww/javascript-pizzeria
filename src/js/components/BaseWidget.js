@@ -5,14 +5,14 @@ class BaseWidget{
     // thisWidget.value = 1;
     thisWidget.dom = {};
     thisWidget.dom.wrapper = wrapperElement;
-    thisWidget.correctValue = initialValue;
-     //****************************
-    // console.log(thisWidget.correctValue);
     console.log(thisWidget.value);
+    thisWidget.correctValue = initialValue;
+    //****************************
+    console.log(thisWidget.correctValue);
   }
   get value(){
     const thisWidget = this;
-
+    console.log(thisWidget.correctValue);
     return thisWidget.correctValue;
   }
   set value(value){
