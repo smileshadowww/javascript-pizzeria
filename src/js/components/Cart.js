@@ -1,5 +1,5 @@
-import {settings, select, classNames, templates} from './settings.js';
-import {utils} from './utils.js';
+import {settings, select, classNames, templates} from '../settings.js';
+import {utils} from '../utils.js';
 import CartProduct from './CartProduct.js';
 class Cart{
   constructor(element){
@@ -46,10 +46,10 @@ class Cart{
     const generatedHTML = templates.cartProduct(menuProduct);
     const generatedDOM = utils.createDOMFromHTML(generatedHTML);
     thisCart.dom.productList.appendChild(generatedDOM);
-    console.log(thisCart.products);
+    // console.log(thisCart.products);
     thisCart.products.push(new CartProduct(menuProduct, generatedDOM));
     thisCart.update();
-    // console.log('adding product', menuProduct);
+    // // console.log('adding product', menuProduct);
   }
   update(){
     const thisCart = this;
@@ -66,25 +66,25 @@ class Cart{
     // thisCart.totalPrice = thisCart.subtotalPrice + deliveryFee;
     thisCart.dom.subtotalPrice.innerHTML = thisCart.subtotalPrice;
     thisCart.dom.totalNumber.innerHTML = thisCart.totalNumber;
-    console.log(thisCart.totalNumber);
+    // console.log(thisCart.totalNumber);
     if(thisCart.totalNumber == 0){
       thisCart.dom.totalPrice.forEach(element => element.innerHTML = 0);
       thisCart.dom.deliveryFee.innerHTML = 0;
     } else {
-      console.log(deliveryFee);
-      console.log(thisCart.dom.deliveryFee);
+      // console.log(deliveryFee);
+      // console.log(thisCart.dom.deliveryFee);
       thisCart.dom.deliveryFee.innerHTML = deliveryFee;
       thisCart.totalPrice = thisCart.subtotalPrice + deliveryFee;
       thisCart.dom.totalPrice.forEach(element => element.innerHTML = thisCart.totalPrice);
-      console.log(thisCart.totalPrice);
+      // console.log(thisCart.totalPrice);
     }
   }
   remove(productToDelete){
     const thisCart = this;
     const indexOfProduct = thisCart.products.indexOf(productToDelete);
-    console.log(indexOfProduct);
+    // console.log(indexOfProduct);
     thisCart.products.splice(indexOfProduct, 1);
-    console.log(this);
+    // console.log(this);
     productToDelete.dom.wrapper.remove();
     thisCart.update();
 
@@ -103,7 +103,7 @@ class Cart{
       products: [],
     };
     for(let product of thisCart.products){
-      console.log(thisCart.products);
+      // console.log(thisCart.products);
       payload.products.push(product.getData());
     }
     const options = {

@@ -1,4 +1,4 @@
-import {select} from './settings.js';
+import {select} from '../settings.js';
 import AmountWidget from './AmountWidget.js';
 class CartProduct {
   constructor(menuProduct, element){
@@ -12,7 +12,7 @@ class CartProduct {
     thisCartProduct.params = menuProduct.params;
 
     thisCartProduct.getElements(element);
-    console.log(thisCartProduct);
+    // console.log(thisCartProduct);
     thisCartProduct.initAmountWidget();
     thisCartProduct.initActions();
   }
@@ -35,10 +35,10 @@ class CartProduct {
     );
     thisCartProduct.dom.amountWidget.addEventListener('updated', function () {
       thisCartProduct.amount = thisCartProduct.amountWidget.value;
-      // console.log(thisCartProduct.amount);
+      // // console.log(thisCartProduct.amount);
       thisCartProduct.price =
         thisCartProduct.priceSingle * thisCartProduct.amount;
-      // console.log(thisCartProduct.price);
+      // // console.log(thisCartProduct.price);
       thisCartProduct.dom.price.innerHTML = thisCartProduct.price;
     });
   }
