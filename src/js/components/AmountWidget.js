@@ -38,8 +38,8 @@ class AmountWidget extends BaseWidget{
     const thisWidget = this;
 
     thisWidget.dom.input.addEventListener('change', function(){
-      thisWidget.setValue(thisWidget.input.value);
-      // thisWidget.value = thisWidget.dom.input.value;
+      // thisWidget.setValue(thisWidget.input.value);
+      thisWidget.value = thisWidget.dom.input.value;
       // console.log(thisWidget.value);
     });
     thisWidget.dom.linkDecrease.addEventListener('click', function(event){
