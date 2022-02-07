@@ -62,6 +62,7 @@ export const select = {
     peopleAmount: '.people-amount',
     hoursAmount: '.hours-amount',
     tables: '.floor-plan .table',
+    floorMap: '.floor-plan',
   },
   nav: {
     links: '.main-nav a',
@@ -81,6 +82,8 @@ export const classNames = {
   booking: {
     loading: 'loading',
     tableBooked: 'booked',
+    table: 'table',
+    tableSelected: 'selectedTable',
   },
   nav: {
     active: 'active',
@@ -96,12 +99,10 @@ export const settings = {
     defaultValue: 1,
     defaultMin: 1,
     defaultMax: 10,
-  }, // CODE CHANGED
-  // CODE ADDED START
+  },
   cart: {
     defaultDeliveryFee: 20,
   },
-  // CODE ADDED END
   db: {
     url: '//localhost:3131',
     products: 'products',

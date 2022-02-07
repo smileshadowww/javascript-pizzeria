@@ -1,18 +1,18 @@
 class BaseWidget{
   constructor(wrapperElement, initialValue){
     const thisWidget = this;
-    console.log(wrapperElement);
+    //  console.log(wrapperElement);
     // thisWidget.value = 1;
     thisWidget.dom = {};
     thisWidget.dom.wrapper = wrapperElement;
-    console.log(thisWidget.value);
+    //  console.log(thisWidget.value);
     thisWidget.correctValue = initialValue;
     //****************************
-    console.log(thisWidget.correctValue);
+    //  console.log(thisWidget.correctValue);
   }
   get value(){
     const thisWidget = this;
-    console.log(thisWidget.correctValue);
+    //  console.log(thisWidget.correctValue);
     return thisWidget.correctValue;
   }
   set value(value){
@@ -26,7 +26,7 @@ class BaseWidget{
   }
   setValue(value){
     const thisWidget = this;
-    console.log(value);
+    //  console.log(value);
     thisWidget.value = value;
   }
   parseValue(value){
