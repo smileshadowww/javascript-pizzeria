@@ -1,8 +1,8 @@
 import {settings, select} from '../settings.js';
 import BaseWidget from './BaseWidget.js';
 class AmountWidget extends BaseWidget{
-  constructor(element){
-    super(element, settings.amountWidget.defaultValue);
+  constructor(element, amountOfProduct){
+    super(element, amountOfProduct || settings.amountWidget.defaultValue);
     const thisWidget = this;
     // console.log('AmountWidget: ', thisWidget);
     // console.log('constructor arguments: ', element);
