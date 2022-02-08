@@ -193,10 +193,12 @@
     top: 180px;
   }
 }
+
 .selectedTable {
   color: green;
   background-color: green;
 }
+
 .booking-options {
   @include flex(row, flex-start, space-between);
   margin: ($base-size * 4) auto;
