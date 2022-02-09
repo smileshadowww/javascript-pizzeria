@@ -3,6 +3,7 @@ import {settings, select, classNames} from './settings.js';
 import Product from './components/Product.js';
 import Cart from './components/Cart.js';
 import Booking from './components/Booking.js';
+import Home from './components/Home.js';
 const app = {
   initPages: function(){
     const thisApp = this;
@@ -77,6 +78,11 @@ const app = {
     const bookingWidget = document.querySelector(select.containerOf.booking);
     thisApp.booking = new Booking(bookingWidget);
   },
+  initHome: function(){
+    const thisApp = this;
+    const homeWidget = document.querySelector(select.containerOf.home);
+    thisApp.home = new Home(homeWidget);
+  },
   init: function(){
     const thisApp = this;
     // // console.log('*** App starting ***');
@@ -88,6 +94,7 @@ const app = {
     thisApp.initCart();
     thisApp.initPages();
     thisApp.initBooking();
+    thisApp.initHome();
   },
 };
 
