@@ -20,7 +20,6 @@ class Home{
 
     new Flickity (element,{ // eslint-disable-line
       autoPlay: 3000,
-      imagesLoaded: true,
       cellAlign: 'left',
       contain: true
     });
@@ -31,8 +30,9 @@ class Home{
     thisHome.pages = document.querySelector(select.containerOf.pages).children;
     thisHome.navLinks = document.querySelectorAll(select.nav.baners);
 
+
     for(let link of thisHome.navLinks){
-      console.log(thisHome.navLinks);
+      // console.log(thisHome.navLinks);
       link.addEventListener('click', function(event){
         const clickedElement = this;
         event.preventDefault();
@@ -44,10 +44,12 @@ class Home{
   }
   activatePage(pageId){
     const thisHome = this;
+    const navButtons = document.querySelectorAll(select.nav.links);
     for(let page of thisHome.pages){
       page.classList.toggle(classNames.pages.active, page.id == pageId);
     }
-    for(let link of thisHome.navLinks){
+    for(let link of navButtons){
+      // console.log(link);
       link.classList.toggle(classNames.nav.active, link.getAttribute('href') == '#' + pageId);
     }
   }
