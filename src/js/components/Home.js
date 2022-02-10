@@ -10,7 +10,6 @@ class Home{
   render(homeWidget) {
     const thisHome= this;
     const generatedHTML = templates.homeWidget();
-
     thisHome.dom = {};
     thisHome.dom.wrapper =homeWidget;
 
@@ -19,7 +18,7 @@ class Home{
   initWidgets() {
     const element = document.querySelector(select.widgets.carousel);
 
-    new Flickity (element,{
+    new Flickity (element,{ // eslint-disable-line
       autoPlay: 3000,
       imagesLoaded: true,
       cellAlign: 'left',

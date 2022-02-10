@@ -90,7 +90,7 @@ const app = {
     // // console.log('classNames:  ', classNames);
     // // console.log('settings:', settings);
     // // console.log('templates:', templates);
-    // thisApp.initData();
+    thisApp.initData();
     thisApp.initCart();
     thisApp.initPages();
     thisApp.initBooking();
@@ -99,5 +99,3 @@ const app = {
 };
 
 app.init();
-
-app.initData();
